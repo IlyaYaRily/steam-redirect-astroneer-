@@ -1,0 +1,29 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Launching Astroneer via Steam...</title>
+    <script>
+        // Попытка автоматического запуска через JavaScript
+        window.location.href = "steam://rungameid/361420"; // <-- Изменено на AppID Astroneer
+
+        // Запасной вариант на случай блокировки
+        setTimeout(function() {
+            var manualLink = document.getElementById('manualLink');
+            if (manualLink) {
+                manualLink.style.display = 'block';
+            }
+        }, 1000);
+    </script>
+</head>
+<body>
+    <h1>Launching Astroneer...</h1>
+    <p>Please wait or confirm the prompt from your browser.</p>
+    
+    <p id="manualLink" style="display:none;">
+        If it doesn't open, 
+        <a href="steam://rungameid/361420">click here to launch manually</a>.
+    </p>
+</body>
+</html>
